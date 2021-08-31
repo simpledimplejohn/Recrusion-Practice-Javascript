@@ -12,7 +12,7 @@ function sum(num) {
   }
   else {
     // console.log("check ", num)
-    return num + sum(num - 1)
+    return num + sum(num - 1) //the second number is the increment 
   }
 }
 
@@ -21,3 +21,16 @@ console.log(sum(0), "[0]")
 console.log(sum(1), "[1]")
 console.log(sum(5), "[15]")
 console.log(sum(10), "[55]")
+
+// sum(5)
+// 5 + sum(4) should = 5 + 10 but then it runs again
+// 4 + sum(3) should = 4 + 6 but then it runs again
+// 3 + sum(2) should = 3 + 3 but then it runs again
+// 2 + sum(1) should = 2 + 1 but then it runs again
+// 1 + sum(0) is the base case num = 1 + 0 = 1
+// this then runs up the previous equations and solves them
+// in the equation 2 + sum(1), sum(1) = 1 so its 2 + 1 = 3 this is then passed to the next equation
+// in the equation 3 + sum(2), sum(2) = 3 so its 3 + 3 = 6  this is then passed to the next equation
+// in the equation 4 + sum(3), sum(3) = 6 so its 4 + 6 = 10  this is then passed to the next equation
+// As this is the final equation this will complete the function and return:
+// in the equation 5 + sum(4), sum(4) = 10 so its 5 + 10 = 15  
