@@ -1,8 +1,8 @@
-# __White Boarding Javascript App__
+# __Functional Programing With Javascript App__
 ### by [John Blalock](https://github.com/simpledimplejohn) 
 
 ### __Description__
-This is an app for learning and practicing white boarding in javascript.  Its a complement to my white boarding in C# app that is used for the same purpose.
+This is an app for learning and practicing functional programing in javascript.  Its a complement to my white boarding in C# app that is used for the same purpose.
 
 ### __Technologies Used__
 
