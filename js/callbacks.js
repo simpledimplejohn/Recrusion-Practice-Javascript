@@ -54,5 +54,18 @@ const doubler = multiplier(2);
 const tripler = multiplier(3);
 const quadrupler = multiplier(4);
 
-console.log(five(2), " should be ", 10);
-console.log(tripler(5), " should be ", 15);
+// console.log(five(2), " should be ", 10);
+// console.log(tripler(5), " should be ", 15);
+
+function howManyEvenNumbers(userInputArray) {
+    let instances = 0;
+    userInputArray.forEach(function(element) {
+        if (element % 2 === 0) {
+            instances++; 
+        }
+    });
+    return instances;
+}
+
+const myArray = [2,3,4,5,6];
+console.log(howManyEvenNumbers(myArray), " should be 3")
