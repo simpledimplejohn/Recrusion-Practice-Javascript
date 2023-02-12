@@ -32,6 +32,8 @@ const summedArray = newNumArray.reduce(function(value, element) {
 
 // console.log(summedArray)
 
+// HOW TO USE REDUCE 
+
 const friends = [
     {
       name: "Jasmine",
@@ -55,5 +57,42 @@ const toDos = friends.reduce(function(array, friend) {
     return array.concat(friend.wantToDo);
 }, []);
 
-console.log(toDos);
+// console.log(toDos);
 
+const toDoTally = toDos.reduce(function(voteTally, toDo) {
+    voteTally[toDo] = (voteTally[toDo] || 0) + 1;
+    return voteTally;
+}, {});
+
+// console.log(toDoTally)
+
+const mostPopular = Object.entries(toDoTally).sort(function(a,b) {
+    return b[1] - a[1]
+});
+
+// console.log(mostPopular);
+
+
+// HOW TO USE FILTER:
+
+const employee = [
+    {
+        name: "Ada",
+        role: "developer"
+    },
+    {
+        name: "Tom",
+        role: "HR"
+    },
+    {
+        name: "Jasmine",
+        role: "developer"
+    },
+    {
+        name: "Hank",
+        role: "admin"
+    }
+];
+
+const developers = employee.filter(e => e.role === "developer")
+console.log(developers);
